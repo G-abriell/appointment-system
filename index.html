@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebouças Barbearia</title>
+    <meta
+      name="description"
+      content="Agende cortes, barba e acabamentos premium na Rebouças Barbearia com calendário online e confirmação instantânea."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-bar nav-bar-no-brand">
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#topo">Início</a>
+          <a href="#buscar">Buscar</a>
+          <a href="#my-bookings">Meus Agendamentos</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="ghost-link is-hidden" href="admin.html" data-admin-link>Painel</a>
+          <div class="account-menu-shell">
+            <button
+              class="nav-auth-btn"
+              type="button"
+              data-auth-button
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              Entrar
+            </button>
+            <div class="account-dropdown is-hidden" data-account-dropdown role="menu">
+              <button class="account-dropdown-item" type="button" data-logout role="menuitem">
+                Deslogar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-shell" id="topo">
+      <div class="main-column">
+        <section class="hero-card surface reveal" style="--stagger: 0">
+          <div
+            class="hero-cover"
+            id="heroCover"
+            role="img"
+            aria-label="Interior da barbearia com iluminação âmbar"
+          ></div>
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content">
+            <div class="hero-profile">
+              <div class="avatar-ring">
+                <img
+                  src="assets/portrait-reboucas.svg"
+                  alt="Ilustração fictícia da identidade da Rebouças Barbearia"
+                />
+              </div>
+
+              <div class="hero-copy">
+                <p class="eyebrow">Agendamento online premium</p>
+                <h1>Rebouças <span>Barbearia</span></h1>
+
+                <div class="rating-row">
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <span>5.0 • referência em degradê, barba modelada e finalização</span>
+                </div>
+
+                <p class="hero-description">
+                  Atmosfera intimista, acabamento técnico e atendimento pontual para
+                  quem quer sair alinhado em qualquer ocasião.
+                </p>
+
+                <div class="hero-actions">
+                  <button class="btn btn-primary glow" type="button" data-open-booking>
+                    Agendar agora
+                  </button>
+                  <a class="btn btn-secondary" href="#my-bookings">
+                    Ver meus horários
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-badges">
+              <span class="info-chip">
+                <i class="ph ph-timer"></i>
+                Pontualidade
+              </span>
+              <span class="info-chip">
+                <i class="ph ph-scissors"></i>
+                Técnicas atuais
+              </span>
+              <span class="info-chip">
+                <i class="ph ph-shield-check"></i>
+                Higiene rigorosa
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="search-strip surface reveal" style="--stagger: 1" id="buscar">
+          <div>
+            <p class="eyebrow">Busca rápida</p>
+            <h2>Encontre o serviço ideal para o seu estilo</h2>
+          </div>
+
+          <label class="search-field" for="serviceSearch">
+            <i class="ph ph-magnifying-glass"></i>
+            <input
+              id="serviceSearch"
+              type="search"
+              placeholder="Buscar corte, barba, sobrancelha..."
+              autocomplete="off"
+            />
+          </label>
+        </section>
+
+        <section class="gallery-section reveal" style="--stagger: 2">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Galeria</p>
+              <h2>Trabalhos e atmosfera da casa</h2>
+            </div>
+            <p class="section-copy">
+              Cada detalhe foi pensado para entregar presença visual dentro e fora
+              da cadeira.
+            </p>
+          </div>
+
+          <div class="masonry-grid">
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-fade.svg"
+                alt="Corte degradê com acabamento preciso"
+                loading="lazy"
+              />
+              <figcaption>Fade preciso</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-beard.svg"
+                alt="Barba modelada com toalha quente"
+                loading="lazy"
+              />
+              <figcaption>Barba modelada</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-interior.svg"
+                alt="Interior moderno de uma barbearia dark"
+                loading="lazy"
+              />
+              <figcaption>Ambiente premium</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-finish.svg"
+                alt="Finalização masculina com textura"
+                loading="lazy"
+              />
+              <figcaption>Textura e volume</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-tools.svg"
+                alt="Ferramentas de barbearia em bancada"
+                loading="lazy"
+              />
+              <figcaption>Ferramentas afiadas</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+              <img
+                src="assets/gallery-style.svg"
+                alt="Cliente após atendimento com visual alinhado"
+                loading="lazy"
+              />
+              <figcaption>Resultado final</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="tabs-section surface reveal" style="--stagger: 3">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Explorar</p>
+              <h2>Escolha a experiência perfeita</h2>
+            </div>
+            <p class="section-copy">
+              Navegue por serviços, barbeiros, fidelidade, produtos e avaliações em
+              uma mesma área dinâmica.
+            </p>
+          </div>
+
+          <div class="tabs-shell">
+            <div class="tabs-header" id="tabsHeader" role="tablist" aria-label="Seções da barbearia">
+              <span class="tab-indicator" id="tabIndicator" aria-hidden="true"></span>
+              <button class="tab-button is-active" type="button" data-tab="services" role="tab">
+                Serviços
+              </button>
+              <button class="tab-button" type="button" data-tab="professionals" role="tab">
+                Profissionais
+              </button>
+              <button class="tab-button" type="button" data-tab="loyalty" role="tab">
+                Fidelidade
+              </button>
+              <button class="tab-button" type="button" data-tab="products" role="tab">
+                Produtos
+              </button>
+              <button class="tab-button" type="button" data-tab="reviews" role="tab">
+                Avaliações
+              </button>
+            </div>
+
+            <div class="tab-content" id="tabContent" role="tabpanel"></div>
+          </div>
+        </section>
+
+        <section class="amenities-section reveal" style="--stagger: 4">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Comodidades</p>
+              <h2>Conforto pensado em cada visita</h2>
+            </div>
+          </div>
+
+          <div class="amenities-grid">
+            <article class="amenity-card surface">
+              <div class="amenity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M2 8a14 14 0 0 1 20 0" />
+                  <path d="M5 11a10 10 0 0 1 14 0" />
+                  <path d="M8.5 14.5a5 5 0 0 1 7 0" />
+                  <circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <h3>Wi-Fi</h3>
+              <p>Internet estável para quem resolve a rotina enquanto espera.</p>
+            </article>
+
+            <article class="amenity-card surface">
+              <div class="amenity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect x="4" y="5" width="16" height="14" rx="3" />
+                  <path d="M9 15V9h3.5a2.5 2.5 0 0 1 0 5H9" />
+                  <path d="M14 15V9l4 6V9" />
+                </svg>
+              </div>
+              <h3>Estacionamento</h3>
+              <p>Opções próximas para uma chegada tranquila e sem correria.</p>
+            </article>
+
+            <article class="amenity-card surface">
+              <div class="amenity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="5.5" r="2.2" />
+                  <path d="M12 8v5.5m0 0H8.2m3.8 0 3.6-1.6" />
+                  <path d="M9 12.8 6.2 17M13.2 13.2 16.4 17M8.5 20h7" />
+                </svg>
+              </div>
+              <h3>Acessibilidade</h3>
+              <p>Circulação facilitada e atendimento com atenção ao conforto.</p>
+            </article>
+
+            <article class="amenity-card surface">
+              <div class="amenity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="9" cy="7" r="2" />
+                  <circle cx="15.5" cy="8.5" r="1.5" />
+                  <path d="M9 9.5v5m0 0-2.5 3m2.5-3 3 2.2" />
+                  <path d="M15.5 10v4m0 0-1.8 2.5m1.8-2.5 2.2 1.5" />
+                </svg>
+              </div>
+              <h3>Atende crianças</h3>
+              <p>Ambiente receptivo para famílias com atendimento paciente.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="bookings-section surface reveal" style="--stagger: 5" id="my-bookings">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Minha agenda</p>
+              <h2>Seus agendamentos em um só lugar</h2>
+            </div>
+            <p class="section-copy">
+              Consulte, acompanhe e cancele horários futuros quando precisar.
+            </p>
+          </div>
+
+          <div id="userBookings" class="appointments-list"></div>
+        </section>
+      </div>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card surface reveal" style="--stagger: 1.5">
+          <div class="sidebar-block">
+            <p class="eyebrow">Localização</p>
+            <h3>Av. Min. José Américo de Almeida, 447</h3>
+            <p>Campus II – Catolé • R. Antônio Guedes de Andrade, 190</p>
+            <span class="map-pill">
+              <i class="ph ph-map-pin-area"></i>
+              Campus II – Catolé
+            </span>
+          </div>
+
+          <div class="sidebar-block">
+            <p class="eyebrow">Horários</p>
+            <div id="hoursList" class="hours-list"></div>
+          </div>
+
+          <div class="sidebar-block">
+            <p class="eyebrow">Pagamentos</p>
+            <div class="pill-group">
+              <span class="pill">Pix</span>
+              <span class="pill">Crédito</span>
+              <span class="pill">Débito</span>
+              <span class="pill">Dinheiro</span>
+            </div>
+          </div>
+
+          <div class="sidebar-block">
+            <p class="eyebrow">Contato</p>
+            <button class="copy-button" type="button" id="copyPhone">
+              <span>(83) 99863-1100</span>
+              <i class="ph ph-copy"></i>
+            </button>
+            <div class="social-row">
+              <a href="#" aria-label="Instagram">
+                <i class="ph ph-instagram-logo"></i>
+              </a>
+              <a href="#" aria-label="WhatsApp">
+                <i class="ph ph-whatsapp-logo"></i>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <i class="ph ph-tiktok-logo"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+      <div class="modal-card booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+        <button class="modal-close" type="button" id="closeBookingModal" aria-label="Fechar modal">
+          <i class="ph ph-x"></i>
+        </button>
+
+        <div class="modal-head">
+          <p class="eyebrow">Reserva online</p>
+          <h3 id="bookingTitle">Monte seu atendimento em 4 passos</h3>
+          <p class="modal-copy">
+            Escolha o serviço, o profissional, o melhor horário e confirme em segundos.
+          </p>
+        </div>
+
+        <div class="stepper" id="bookingStepper"></div>
+
+        <div class="modal-body" id="bookingStepContent"></div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" id="bookingBackBtn">
+            Voltar
+          </button>
+          <button class="btn btn-primary glow" type="button" id="bookingNextBtn">
+            Continuar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/auth.js" defer></script>
+    <script src="js/booking.js" defer></script>
+  </body>
+</html>

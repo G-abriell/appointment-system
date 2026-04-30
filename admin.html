@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel do Barbeiro | Rebouças Barbearia</title>
+    <meta
+      name="description"
+      content="Painel administrativo da Rebouças Barbearia para acompanhar a agenda do dia, gerenciar serviços e horários."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body data-page="admin">
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-bar nav-bar-no-brand">
+        <div class="nav-actions">
+          <a class="ghost-link" href="index.html">Ver site</a>
+          <button class="nav-auth-btn" type="button" data-logout>
+            Sair
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container admin-shell">
+      <section class="admin-overview reveal" style="--stagger: 0">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Operação do dia</p>
+            <h1 class="page-title">Agenda e gestão da barbearia</h1>
+          </div>
+          <p class="section-copy" id="todayLabel"></p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="metric-card surface">
+            <span class="metric-label">Agendamentos hoje</span>
+            <strong class="metric-value" id="todayBookingsCount">0</strong>
+            <small>Confirmados para atendimento</small>
+          </article>
+
+          <article class="metric-card surface">
+            <span class="metric-label">Receita prevista</span>
+            <strong class="metric-value metric-mono" id="todayRevenue">R$ 0,00</strong>
+            <small>Baseada na agenda do dia</small>
+          </article>
+
+          <article class="metric-card surface">
+            <span class="metric-label">Serviços ativos</span>
+            <strong class="metric-value" id="activeServicesCount">0</strong>
+            <small>Disponíveis no agendamento online</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="admin-grid">
+        <section class="admin-section surface reveal" style="--stagger: 1">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Agenda do dia</p>
+              <h2>Clientes agendados</h2>
+            </div>
+          </div>
+
+          <div class="appointments-list" id="todayBookings"></div>
+        </section>
+
+        <section class="admin-section surface reveal" style="--stagger: 2">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Serviços</p>
+              <h2>Adicionar, editar e remover</h2>
+            </div>
+          </div>
+
+          <form class="admin-form" id="serviceForm" novalidate>
+            <input id="serviceId" type="hidden" />
+
+            <div class="input-grid">
+              <div class="input-group">
+                <label for="serviceName">Nome do serviço</label>
+                <input id="serviceName" type="text" placeholder="Ex.: Corte com navalha" required />
+              </div>
+
+              <div class="input-group">
+                <label for="serviceDuration">Duração (min)</label>
+                <input id="serviceDuration" type="number" min="10" step="5" placeholder="45" required />
+              </div>
+
+              <div class="input-group">
+                <label for="servicePrice">Preço (R$)</label>
+                <input id="servicePrice" type="number" min="0" step="0.01" placeholder="55" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary glow" type="submit" id="serviceSubmitBtn">
+                Salvar serviço
+              </button>
+              <button class="btn btn-secondary" type="button" id="serviceCancelEdit">
+                Limpar
+              </button>
+            </div>
+          </form>
+
+          <div class="service-admin-list" id="adminServicesList"></div>
+        </section>
+
+        <section class="admin-section surface reveal" style="--stagger: 3">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Horários de funcionamento</p>
+              <h2>Configure cada dia da semana</h2>
+            </div>
+          </div>
+
+          <form id="hoursForm" class="hours-admin-list"></form>
+
+          <div class="form-actions">
+            <button class="btn btn-primary glow" type="button" id="saveHoursBtn">
+              Salvar horários
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="js/auth.js" defer></script>
+    <script src="js/admin.js" defer></script>
+  </body>
+</html>

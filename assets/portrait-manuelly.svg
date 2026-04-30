@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Manuelly</title>
+  <desc id="desc">Avatar estilizado da profissional Manuelly.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#291305" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8b73f" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="52" fill="url(#bg)" />
+  <circle cx="200" cy="200" r="126" fill="#120f0a" stroke="url(#ring)" stroke-width="12" />
+  <circle cx="200" cy="172" r="52" fill="#f1c6a2" />
+  <path d="M126 316c20-60 58-90 114-90 58 0 97 29 120 90" fill="#8c5330" />
+  <path d="M143 167c2-48 26-79 58-79 26 0 48 19 60 57-14-7-31-11-50-11-25 0-48 8-68 23Z" fill="#1f1510" />
+  <path d="M146 172c22 10 46 15 73 15 25 0 48-5 68-15-13 28-44 44-68 44-31 0-57-17-73-44Z" fill="#1f1510" opacity="0.14" />
+  <text x="200" y="338" text-anchor="middle" fill="#f8b73f" font-size="44" font-family="Arial, sans-serif" font-weight="700">M</text>
+</svg>

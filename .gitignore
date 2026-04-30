@@ -1,0 +1,13 @@
+# Ficheiros do Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Configurações de Editores (VS Code, Sublime, etc)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs e ficheiros temporários
+*.log
+npm-debug.log*

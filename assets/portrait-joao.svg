@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">João</title>
+  <desc id="desc">Avatar estilizado do profissional João.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#241102" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8b73f" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="52" fill="url(#bg)" />
+  <circle cx="200" cy="200" r="126" fill="#120f09" stroke="url(#ring)" stroke-width="12" />
+  <circle cx="200" cy="170" r="53" fill="#e7bc90" />
+  <path d="M126 316c20-58 58-88 114-88 58 0 97 29 120 88" fill="#715842" />
+  <path d="M145 152c10-39 35-62 59-62 28 0 48 19 58 55-13-6-28-10-45-10-29 0-51 6-72 17Z" fill="#1a1714" />
+  <path d="M173 213c10 10 18 14 27 14 10 0 18-4 27-14" fill="none" stroke="#a96f3b" stroke-width="7" stroke-linecap="round" />
+  <text x="200" y="338" text-anchor="middle" fill="#f8b73f" font-size="44" font-family="Arial, sans-serif" font-weight="700">J</text>
+</svg>

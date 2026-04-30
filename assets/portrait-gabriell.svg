@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Gabriell</title>
+  <desc id="desc">Avatar estilizado do profissional Gabriell.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161616" />
+      <stop offset="100%" stop-color="#2a1806" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8b73f" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="52" fill="url(#bg)" />
+  <circle cx="200" cy="200" r="126" fill="#110f0a" stroke="url(#ring)" stroke-width="12" />
+  <circle cx="200" cy="168" r="54" fill="#f2c99a" />
+  <path d="M122 312c22-58 61-86 118-86 57 0 96 28 118 86" fill="#c98534" />
+  <path d="M148 147c10-34 33-54 52-54 26 0 44 15 53 46-10-7-23-11-38-11-27 0-48 7-67 19Z" fill="#1f1a16" />
+  <text x="200" y="338" text-anchor="middle" fill="#f8b73f" font-size="44" font-family="Arial, sans-serif" font-weight="700">G</text>
+</svg>

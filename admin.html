@@ -90,7 +90,7 @@
           <form class="admin-form" id="serviceForm" novalidate>
             <input id="serviceId" type="hidden" />
 
-            <div class="input-grid">
+            <div class="input-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
               <div class="input-group">
                 <label for="serviceName">Nome do serviço</label>
                 <input id="serviceName" type="text" placeholder="Ex.: Corte com navalha" required />
@@ -103,7 +103,13 @@
 
               <div class="input-group">
                 <label for="servicePrice">Preço (R$)</label>
-                <input id="servicePrice" type="number" min="0" step="0.01" placeholder="55" required />
+                <input
+                  id="servicePrice"
+                  type="text"
+                  inputmode="decimal"
+                  placeholder="55,00"
+                  required
+                />
               </div>
             </div>
 

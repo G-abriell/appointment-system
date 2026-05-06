@@ -83,6 +83,30 @@
       .join("");
   }
 
+  function parsePriceInput(value) {
+    const normalized = value.trim();
+
+    if (!normalized) {
+      return Number.NaN;
+    }
+
+    const hasComma = normalized.includes(",");
+    const hasDot = normalized.includes(".");
+    let numericValue = normalized.replace(/\s/g, "");
+
+    if (hasComma && hasDot) {
+      numericValue = numericValue.replace(/\./g, "").replace(",", ".");
+    } else if (hasComma) {
+      numericValue = numericValue.replace(",", ".");
+    }
+
+    return Number(numericValue);
+  }
+
+  function formatPriceInput(value) {
+    return Number(value).toFixed(2).replace(".", ",");
+  }
+
   function resetServiceForm() {
     serviceIdInput.value = "";
     serviceNameInput.value = "";
@@ -129,7 +153,7 @@
         serviceIdInput.value = String(service.id);
         serviceNameInput.value = service.name;
         serviceDurationInput.value = String(service.duration);
-        servicePriceInput.value = String(service.price);
+        servicePriceInput.value = formatPriceInput(service.price);
         serviceSubmitBtn.textContent = "Atualizar serviço";
         serviceForm.scrollIntoView({ behavior: "smooth", block: "start" });
       });
@@ -152,9 +176,9 @@
 
     const name = serviceNameInput.value.trim();
     const duration = Number(serviceDurationInput.value);
-    const price = Number(servicePriceInput.value);
+    const price = parsePriceInput(servicePriceInput.value);
 
-    if (!name || duration <= 0 || price < 0) {
+    if (!name || !Number.isFinite(duration) || duration <= 0 || !Number.isFinite(price) || price < 0) {
       app.notify("Preencha nome, duração e preço corretamente.", "error");
       return;
     }
@@ -178,6 +202,13 @@
     renderServicesAdmin();
     renderOverview();
   }
+
+  servicePriceInput.addEventListener("blur", () => {
+    const price = parsePriceInput(servicePriceInput.value);
+    if (Number.isFinite(price) && price >= 0) {
+      servicePriceInput.value = formatPriceInput(price);
+    }
+  });
 
   function renderHoursAdmin() {
     hoursForm.innerHTML = app
